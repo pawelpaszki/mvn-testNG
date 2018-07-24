@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test" duration-ms="5" started-at="2018-07-24T09:35:30Z" finished-at="2018-07-24T09:35:30Z">
+  <suite name="Automation Test" duration-ms="16178" started-at="2018-07-24T09:37:41Z" finished-at="2018-07-24T09:37:57Z">
     <groups>
     </groups>
-    <test name="smoke test cases" duration-ms="5" started-at="2018-07-24T09:35:30Z" finished-at="2018-07-24T09:35:30Z">
+    <test name="smoke test cases" duration-ms="16178" started-at="2018-07-24T09:37:41Z" finished-at="2018-07-24T09:37:57Z">
+      <class name="framework.AppTest">
+        <test-method status="PASS" signature="shouldAnswerWithTrue()[pri:0, instance:framework.AppTest@57fffcd7]" name="shouldAnswerWithTrue" duration-ms="16158" started-at="2018-07-24T09:37:41Z" finished-at="2018-07-24T09:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- framework.AppTest -->
     </test> <!-- smoke test cases -->
   </suite> <!-- Automation Test -->
 </testng-results>
