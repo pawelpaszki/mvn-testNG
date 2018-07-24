@@ -1,13 +1,12 @@
 package framework;
 
-import static org.junit.Assert.*;
-
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -42,29 +41,29 @@ public class AppTest
 		
 		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
 		
-		assertTrue(driver.findElementByXPath("//android.widget.TextView[@text='Preference']").isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementByXPath("//android.widget.TextView[@text='Preference']").isDisplayed());
 		
 		driver.findElementByXPath("//android.widget.TextView[@text='Preference']").click();
 		
-		assertTrue(driver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").isDisplayed());
 		
 		driver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").click();
 		
-		assertTrue(driver.findElementById("android:id/checkbox").isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementById("android:id/checkbox").isDisplayed());
 
 		driver.findElementById("android:id/checkbox").click();
 
-		assertTrue(driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").isDisplayed());
 		
 		driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click();
 		
 		driver.findElementById("android:id/edit").sendKeys("Secure Network");
 		
-		assertTrue(driver.findElementById("android:id/edit").isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementById("android:id/edit").isDisplayed());
 		
-		assertTrue(driver.findElementById("android:id/edit").getText().equals("Secure Network"));
+		AssertJUnit.assertTrue(driver.findElementById("android:id/edit").getText().equals("Secure Network"));
 		
-		assertTrue(driver.findElementsByClassName("android.widget.Button").get(1).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElementsByClassName("android.widget.Button").get(1).isDisplayed());
 		
 		driver.findElementsByClassName("android.widget.Button").get(1).click();
 		
